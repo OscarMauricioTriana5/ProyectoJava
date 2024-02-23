@@ -18,7 +18,7 @@ public class Ejercicio2 {
         System.out.println("Igrese la cantidad de  llantas desea comprar: ");
         int cantidadLlantas = scanner.nextInt();
 
-        double precioUnitario = 100;
+        double precioUnitario = 0;
 
         if (cantidadLlantas < 5) {
             precioUnitario = 100;
@@ -30,6 +30,7 @@ public class Ejercicio2 {
         double valorTotal = precioUnitario * cantidadLlantas;
         System.out.println("El precio unitario por cada llanta es: $ " + precioUnitario);
         System.out.println("El precio total es : $" + valorTotal);
+
         scanner.close();
     }
 }
