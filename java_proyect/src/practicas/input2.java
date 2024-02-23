@@ -11,5 +11,6 @@ public class input2 {
         System.out.print("Numero 2: ");
         num2 = in.nextInt();
         System.out.println("Suma = " + (num1 + num2));
+        in.close();
     }
 }

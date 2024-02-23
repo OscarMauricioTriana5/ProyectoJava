@@ -10,5 +10,6 @@ public class input {
         System.out.print("Ingresa otro número: ");
         int numero2 = Sc.nextInt();
         System.out.println("La suma es: " + (numero1 + numero2));
+        Sc.close();
     }
 }

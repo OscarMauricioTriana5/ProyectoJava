@@ -1,5 +1,6 @@
 package Ejercicios;
 
+/*Oscar Triana 20232217856 */
 /*En una tienda de computadoras se planea ofrecer a los clientes un descuento que dependerá
 del número de equipos que compre. Si las computadoras son menos de cinco se les dará un
 10% de descuento sobre el total de la compra; si el número de computadoras es mayor o igual
@@ -32,5 +33,6 @@ public class Ejercicio1 {
         System.out.println("valor total: $" + valorTotal);
         System.out.println("Descuento: " + (descuento * 100) + "%");
         System.out.println("valor con descuento: $" + valorConDescuento);
+        scanner.close();
     }
 }
