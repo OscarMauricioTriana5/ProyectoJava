@@ -11,13 +11,13 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
-        double precioComputadora = 500;
+        double Computador = 500;
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("cuantas computadoras compró:");
         int numero = scanner.nextInt();
 
-        double valorTotal = numero * precioComputadora;
+        double valorTotal = numero * Computador;
         double descuento;
 
         if (numero < 5) {

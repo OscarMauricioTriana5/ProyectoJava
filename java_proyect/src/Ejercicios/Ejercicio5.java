@@ -15,7 +15,7 @@ Desplegar que cantidades se destinaran para la compra de insumos e incentivos al
 en caso de que fuera necesario, a cuánto ascendería la cantidad que se pediría al banco. */
 import java.util.Scanner;
 
-public class Ejercico5 {
+public class Ejercicio5 {
     public static void main(String[] args) {
         Scanner ca = new Scanner(System.in);
         System.out.println("Ingrese su capital actual ");
