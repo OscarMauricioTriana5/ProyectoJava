@@ -54,14 +54,12 @@ public class Ejercicio7 {
             Creditos = 45;
             Descuento = 0.0;
             Matricula = 18000 * (Creditos / 5);
-            if (Reprobadas <= 3)
-                ;
+
         } else if (Promedio > 7 && Carrera.equalsIgnoreCase("Tecnologia ")) {
             Creditos = 40;
             Descuento = 0.0;
             Matricula = 18000 * (Creditos / 5);
-            if (Reprobadas > 4)
-                ;
+
         } else if (Promedio >= 9.5 && Carrera.equalsIgnoreCase("Profesional")) {
             Creditos = 45;
             Descuento = 0.20;
