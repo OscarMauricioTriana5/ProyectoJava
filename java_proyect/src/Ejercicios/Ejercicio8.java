@@ -12,6 +12,23 @@ import java.util.Scanner;
 
 public class Ejercicio8 {
     public static void main(String[] args) {
+        Scanner Ronaldo = new Scanner(System.in);
 
+        System.out.print("cuantos años tiene:");
+        int edad = Ronaldo.nextInt();
+
+        System.out.print("desde que edad trabaja en la empresa:");
+        int edadTrabajo = Ronaldo.nextInt();
+
+        int antiguedad = edad - edadTrabajo;
+
+        if (edad > 60 && antiguedad < 25) {
+            System.out.println("esta inscrito a jubilacion por edad");
+        } else if (edad < 60 && antiguedad > 25) {
+            System.out.println("esta inscrito a jubilacion por antiguedad joven");
+        } else if (edad > 60 && antiguedad > 25) {
+            System.out.println("esta inscrito a jubilacion por antiguedad  adulta");
+        }
+        Ronaldo.close();
     }
 }
