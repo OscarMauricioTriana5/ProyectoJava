@@ -17,7 +17,7 @@ public class Ejercicio4 {
                 "Hola buenas tardes, el kilo de manzana cuesta $3000 pesos,cuanto kilos de manzana desea llevar ");
         double manzana = mau.nextDouble();
         double descuento = 0;
-        double valorTotal = manzana * 3000;
+        double valorTotal = manzana * 5;
 
         if (manzana <= 2) {
             descuento = 0;
