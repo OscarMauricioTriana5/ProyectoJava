@@ -27,55 +27,55 @@ public class Ejercicio7 {
     public static void main(String[] args) {
 
         Scanner Lu = new Scanner(System.in);
-        System.out.println("Ingrese la carrera que estudia ");
+        System.out.println("Esrudias la carrera Tecnologia? ");
         String Carrera = Lu.next();
         System.out.println("Ingrese su promedio ");
         double Promedio = Lu.nextDouble();
         System.out.println("Ingrese la cantidad de materias reprobadas ");
-        int Reprobadas = Lu.nextInt();
+        int reprobadas = Lu.nextInt();
 
         double Creditos = 0;
         double Descuento = 0;
         double Matricula = 0;
 
-        if (Carrera.equalsIgnoreCase("Tecnologia") && Promedio >= 9.5) {
-            Creditos = 55;
-            Descuento = 0.25;
-            Matricula = 18000 * (Creditos / 5);
-        } else if (Promedio >= 9 && Carrera.equalsIgnoreCase("Tecnologia ")) {
-            Creditos = 50;
-            Descuento = 0.10;
-            Matricula = 18000 * (Creditos / 5);
-        } else if (Promedio > 7 && Carrera.equalsIgnoreCase("Tecnologia ")) {
-            Creditos = 45;
-            Descuento = 0.0;
-            Matricula = 18000 * (Creditos / 5);
-        } else if (Promedio < 7 && Carrera.equalsIgnoreCase("Tecnologia ")) {
-            Creditos = 45;
-            Descuento = 0.0;
-            Matricula = 18000 * (Creditos / 5);
+        if (Carrera.equalsIgnoreCase("SI")) {
+            Matricula = 18000;
+            if (Promedio >= 9.5) {
+                Creditos = 55;
+                Descuento = 0.25;
 
-        } else if (Promedio > 7 && Carrera.equalsIgnoreCase("Tecnologia ")) {
-            Creditos = 40;
-            Descuento = 0.0;
-            Matricula = 18000 * (Creditos / 5);
+            } else if (Promedio >= 9) {
+                Creditos = 50;
+                Descuento = 0.10;
 
-        } else if (Promedio >= 9.5 && Carrera.equalsIgnoreCase("Profesional")) {
-            Creditos = 45;
-            Descuento = 0.20;
-            Matricula = 30000 * (Creditos / 5);
-        } else if (Promedio < 9.5 && Carrera.equalsIgnoreCase("Profesional")) {
-            Creditos = 55;
-            Descuento = 0.0;
-            Matricula = 30000 * (Creditos / 5);
+            } else if (Promedio > 7) {
+                Creditos = 45;
+                Descuento = 0.0;
 
+            } else if (Promedio < 7 && reprobadas >= 0 && reprobadas <= 3) {
+                Creditos = 45;
+                Descuento = 0.0;
+            } else {
+                Creditos = 40;
+                Descuento = 0.0;
+            }
+
+        } else {
+            Matricula = 30000;
+            if (Promedio >= 9.5) {
+                Creditos = 55;
+                Descuento = 0.20;
+
+            } else {
+                Creditos = 45;
+                Descuento = 0.0;
+            }
         }
 
-        double ValorPagar = Matricula - (Matricula * Descuento);
+        double subTotal = Matricula * (Creditos / 5);
+        double ValorPagar = subTotal - (subTotal * Descuento);
         System.out.println("El valor de la matricula es de: " + ValorPagar);
 
         Lu.close();
-
     }
-
 }
