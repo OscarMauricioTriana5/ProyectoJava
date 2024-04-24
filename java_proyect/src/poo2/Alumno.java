@@ -53,5 +53,5 @@ public class Alumno {
             System.out.println("no aprobe");
         }
     }
-    // herencia: ppermite reutilizar clases de la clase madre
+    // herencia: permite reutilizar clases de la clase madre
 }

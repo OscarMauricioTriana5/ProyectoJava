@@ -38,4 +38,9 @@ public class Triangulo {
 
     }
 
+    @Override
+    public String toString() {
+        return "Triangulo [base=" + base + ", altura=" + altura + "]";
+    }
+
 }
