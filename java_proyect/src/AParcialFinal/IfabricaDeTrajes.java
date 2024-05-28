@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface IfabricaDeTrajes {
 
-    void añadirComponentesAAlmacen(Componentes componentes);
+    void añadirComponentesAAlmacen(Componentes componentes) throws IdExeption;
 
     void listarComponentes();
 

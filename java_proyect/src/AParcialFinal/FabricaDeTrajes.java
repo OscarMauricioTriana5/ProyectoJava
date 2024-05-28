@@ -32,6 +32,19 @@ public class FabricaDeTrajes implements IfabricaDeTrajes {
 
     }
 
+    /*
+     * @Override
+     * public void añadirComponentesAAlmacen(Componentes componentes) throws
+     * IdException {
+     * for (Componentes comp : componentesEnAlmacen) {
+     * if (comp.getId() == componentes.getId()) {
+     * throw new IdExeption("El ID ya existe: " + componentes.getId());
+     * }
+     * }
+     * componentesEnAlmacen.add(componentes);
+     * }
+     */
+
     @Override
     public void añadirComponentesAAlmacen(Componentes componentes) {
         componentesEnAlmacen.add(componentes);
@@ -74,6 +87,7 @@ public class FabricaDeTrajes implements IfabricaDeTrajes {
     }
 
     public void menuPrueba() {
+
         System.out.println("Que componentes desea crear: ");
         System.out.println("1-. Falda");
         System.out.println("2-. Chaqueta");
@@ -85,10 +99,11 @@ public class FabricaDeTrajes implements IfabricaDeTrajes {
     public void componenteDePrueba() {
 
         añadirComponentesAAlmacen(new Falda(1, "Falda Azul", "s", "Azul", false, 450, true));
-        añadirComponentesAAlmacen(new Pantalon(23, "vaqueros", "M", "Gris", false, 280, true));
-        añadirComponentesAAlmacen(new Blusa(4, "Blusa sencilla", "s", "Blanca", false, 150, false));
-        añadirComponentesAAlmacen(new Chaqueta(33, "Americana", "L", "Negro", false, 230, 6));
-        añadirComponentesAAlmacen(new Falda(3, "Moda", "M", "rojo", false, 124, true));
+        añadirComponentesAAlmacen(new Pantalon(2, "vaqueros", "M", "Gris", false, 280, true));
+        añadirComponentesAAlmacen(new Blusa(3, "Blusa sencilla", "s", "Blanca", false, 150, false));
+        añadirComponentesAAlmacen(new Chaqueta(4, "Americana", "L", "Negro", false, 230, 6));
+        Componentes tr1 = new Falda(5, "Moda", "M", "rojo", false, 124, true);
+
     }
 
     public void crearComponenteDePrueba(Scanner pr) {
@@ -256,7 +271,12 @@ public class FabricaDeTrajes implements IfabricaDeTrajes {
                     System.out.println("Color");
                     String color = Leo.nextLine();
                     System.out.println("Es comunitario Si/No");
-                    boolean esComunitario = Leo.nextBoolean();
+                    String esComunitario9;
+                    boolean esComunitario;
+                    do {
+                        esComunitario9 = Leo.nextLine().toLowerCase();
+                    } while (!esComunitario9.equals("si") && !esComunitario9.equals("no"));
+                    esComunitario = esComunitario9.equals("si");
                     System.out.println("Precio");
                     double precio = Leo.nextDouble();
                     Leo.nextLine();
